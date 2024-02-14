@@ -7,7 +7,7 @@ import LivePreview from "./components/LivePreview"
 function App() {
   return (
       <div className=
-      "grid grid-cols-1 grid-rows-2 sm:grid-cols-2 sm:grid-rows-1 lg:grid-cols-mainlayout" 
+      "grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-1 lg:grid-cols-mainlayout" 
       >
         <InputContainer>
           <PersonalDetails />
