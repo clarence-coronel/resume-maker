@@ -25,7 +25,7 @@ export default function PersonalDetails({ personalDetailsObj, onChangeHandler })
                 <Input onChangeHandler={onChangeHandler} label="Full Name" name="name" placeholder="Juan Dela Cruz" value={personalDetailsObj.name}/>
                 <Input onChangeHandler={onChangeHandler} label="Email" name="email" placeholder="example@gmail.com" value={personalDetailsObj.email}/>
                 <Input onChangeHandler={onChangeHandler} label="Phone Number" name="phone" placeholder="09XX XXX XXXX" value={personalDetailsObj.phone}/>
-                <Input onChangeHandler={onChangeHandler} label="Address" name="address" placeholder="Plaridel, Bulacan" value={personalDetailsObj.address}/>
+                <Input onChangeHandler={onChangeHandler} label="Address" name="address" placeholder="Municipality, Province" value={personalDetailsObj.address}/>
             </div>
         </div>
     )
