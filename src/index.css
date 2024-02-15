@@ -4,6 +4,6 @@
 
 @layer components {
     * {
-      @apply box-border font-inter;
+      @apply box-border font-inter text-neutral-900;
     }
   }
