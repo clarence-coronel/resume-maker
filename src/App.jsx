@@ -3,6 +3,7 @@ import PersonalDetails from "./components/PersonalDetails"
 import Education from "./components/Education"
 import Experience from "./components/Experience"
 import LivePreview from "./components/LivePreview"
+import DownloadContainer from "./components/DownloadContainer"
 import { useState } from "react"
 
 
@@ -24,12 +25,13 @@ function App() {
       "grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-1 lg:grid-cols-mainlayout" 
       >
         <InputContainer>
+          <DownloadContainer livePreview={<LivePreview personalDetailsObj={personalDetails} />} />
           <PersonalDetails personalDetailsObj={personalDetails} onChangeHandler={updatePersonalDetails} />
           <Education />
           <Experience />
         </InputContainer>
         
-        <LivePreview personalDetailsObj={personalDetails}  />
+        <LivePreview personalDetailsObj={personalDetails} />
       </div>
   )
 }
