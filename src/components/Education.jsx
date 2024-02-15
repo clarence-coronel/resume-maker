@@ -28,7 +28,7 @@ function EducationFields({ cancelHandler, isOpen }){
             </div>
 
             <div className="flex flex-col items-start justify-center">
-                <label className="font-medium" htmlFor="">Location</label>
+                <label className="font-medium" htmlFor="">Address</label>
                 <input className="focus:outline-blue-500 border-none bg-neutral-100 rounded-lg px-3 py-2 w-full h-fit" type="text" placeholder="123 Banga 1st, Baliuag, Bulacan"/>
             </div>
 

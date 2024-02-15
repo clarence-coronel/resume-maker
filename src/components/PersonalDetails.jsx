@@ -1,16 +1,16 @@
 import Heading from "./Heading"
 import { useState } from "react"
 
-function Input({ label, placeholder }){
+function Input({ label, placeholder, value, name, onChangeHandler }){
     return (
         <div className="flex flex-col items-start justify-center">
             <label className="font-medium" htmlFor="name">{label}</label>
-            <input className="focus:outline-blue-500 border-none bg-neutral-100 rounded-lg px-3 py-2 w-full h-fit" type="text" id="name" placeholder={placeholder} />
+            <input onChange={onChangeHandler} name={name} value={value} className="focus:outline-blue-500 border-none bg-neutral-100 rounded-lg px-3 py-2 w-full h-fit" type="text" id="name" placeholder={placeholder} />
         </div>
     )
 }
 
-export default function PersonalDetails(){
+export default function PersonalDetails({ personalDetailsObj, onChangeHandler }){
     const [isOpen, setIsOpen] = useState(true);
 
     function toggle(){
@@ -22,10 +22,10 @@ export default function PersonalDetails(){
             <Heading title="Personal Details" clickHandler={toggle} def={true} />
 
             <div className={`${isOpen ? "" : "hidden"} w-full gap-3 flex flex-col`}>
-                <Input label="Full Name" placeholder="Juan Dela Cruz" />
-                <Input label="Email" placeholder="example@gmail.com" />
-                <Input label="Phone Number" placeholder="09XX XXX XXXX" />
-                <Input label="Address" placeholder="Plaridel, Bulacan" />
+                <Input onChangeHandler={onChangeHandler} label="Full Name" name="name" placeholder="Juan Dela Cruz" value={personalDetailsObj.name}/>
+                <Input onChangeHandler={onChangeHandler} label="Email" name="email" placeholder="example@gmail.com" value={personalDetailsObj.email}/>
+                <Input onChangeHandler={onChangeHandler} label="Phone Number" name="phone" placeholder="09XX XXX XXXX" value={personalDetailsObj.phone}/>
+                <Input onChangeHandler={onChangeHandler} label="Address" name="address" placeholder="Plaridel, Bulacan" value={personalDetailsObj.address}/>
             </div>
         </div>
     )

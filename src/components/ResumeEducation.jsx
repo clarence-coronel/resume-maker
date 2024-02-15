@@ -1,6 +1,6 @@
 import ResumeTitle from "./ResumeTitle";
 
-function EducationEntry({ dateRange, location, school, degree }){
+function EducationEntry({ dateRange, address, school, degree }){
     return(
         <div className="w-full h-fit flex flex-row py-5">
             <div className="flex flex-col w-1/4 gap-1">
