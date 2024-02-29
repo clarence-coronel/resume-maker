@@ -4,6 +4,7 @@ import Education from "./components/Education"
 import Experience from "./components/Experience"
 import LivePreview from "./components/LivePreview"
 import DownloadContainer from "./components/DownloadContainer"
+import Footer from "./components/Footer"
 import { useState } from "react"
 import { v4 as uuid } from 'uuid';
 
@@ -43,18 +44,22 @@ function App() {
   }
 
   return (
-      <div className=
-      "grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-1 lg:grid-cols-mainlayout" 
-      >
-        <InputContainer>
-          <DownloadContainer livePreview={<LivePreview personalDetailsObj={personalDetails} />} />
-          <PersonalDetails personalDetailsObj={personalDetails} onChangeHandler={updatePersonalDetails} />
-          <Education add={addEducArr} remove={removeEducArr} educList={educArr} />
-          <Experience add={addExpArr} remove={removeExpArr} expList={expArr}/>
-        </InputContainer>
-        
-        <LivePreview personalDetailsObj={personalDetails} educArr={educArr} expArr={expArr} />
-      </div>
+      <>
+        <div className=
+        "grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-1 lg:grid-cols-mainlayout" 
+        >
+          <InputContainer>
+            <DownloadContainer livePreview={<LivePreview personalDetailsObj={personalDetails} />} />
+            <PersonalDetails personalDetailsObj={personalDetails} onChangeHandler={updatePersonalDetails} />
+            <Education add={addEducArr} remove={removeEducArr} educList={educArr} />
+            <Experience add={addExpArr} remove={removeExpArr} expList={expArr}/>
+          </InputContainer>
+          
+          <LivePreview personalDetailsObj={personalDetails} educArr={educArr} expArr={expArr} />
+        </div>
+        <Footer />
+      </>
+      
   )
 }
 

@@ -23,7 +23,7 @@ function generatePDF(){
 export default function DownloadContainer(){
     return(
         <div className="flex flex-col-reverse sm:flex-row-reverse flex-wrap w-full gap-3 p-5 bg-white rounded-lg border-2 border-gray-200 shadow">
-            <button onClick={generatePDF} className="flex-1 hover:bg-green-600 duration-200 flex flex-row flex-nowrap items-center justify-center gap-1 px-4 py-2 bg-green-500 text-white rounded-md font-bold">Download Resume</button>
+            <button onClick={generatePDF} className="flex-1 hover:bg-green-500 duration-200 flex flex-row flex-nowrap items-center justify-center gap-1 px-4 py-2 bg-green-600 text-white rounded-md font-bold">Download Resume</button>
             {/* <button className="flex-1 hover:bg-neutral-400 duration-200 flex flex-row flex-nowrap items-center justify-center gap-1 px-4 py-2 bg-neutral-300 text-white rounded-md font-bold">Sample Resume</button> */}
         </div>
     )
